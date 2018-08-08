@@ -32,7 +32,7 @@ export class UserService {
   }
 
   getUser(): Observable<any> {
-    counter = (counter + 1) % this.userArray.length;
+    counter = (counter + 1) % this.userArray.length   ;
     return observableOf(this.userArray[counter]);
   }
 }
