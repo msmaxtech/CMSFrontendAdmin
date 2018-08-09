@@ -33,7 +33,7 @@ client: any;
     this.clientService.getClientMaster().
     subscribe((clients: any) => {
       this.client = clients;
-      console.log('clients..' +  this.client);
+      console.log('clients..' +  this.client.clientName);
     });
 
 
