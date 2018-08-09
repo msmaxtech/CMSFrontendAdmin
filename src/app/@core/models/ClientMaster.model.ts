@@ -1,31 +1,17 @@
 export class ClientMaster {
-  clientId: String;
-  pri String
-  city;
-  private String
-  clientName;
-  private String
-  copyRightsYear;
-  private String
-  country;
-  private String
-  createdBy;
-  private Timestamp
-  createdOn;
-  private String
-  emailId;
-  private String
-  facebookLink;
-  private String
-  lastModifiedBy;
-  private Timestamp
-  lastModifiedOn;
-  private String
-  phoneNo;
-  private String
-  street;
-  private String
-  twitterLink;
-  private String
-  websiteName;
+  clientId: any;
+  city: string;
+  clientName: string;
+  copyRightsYear: string;
+  country: string;
+  createdBy: string;
+  createdOn: any;
+  emailId: string;
+  facebookLink: string;
+  lastModifiedBy: string;
+  lastModifiedOn: any;
+  phoneNo: string;
+  street: string;
+  twitterLink: string;
+  websiteName: string;
 }
