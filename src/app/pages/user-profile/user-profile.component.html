@@ -1,121 +1,75 @@
-<div class="row">
-  <div class="col-lg-12">
-    <nb-card>
-      <nb-card-header>Default Inputs</nb-card-header>
-      <nb-card-body>
-        <div class="col-4 input-group">
-          <input type="text" placeholder="Project" [(ngModel)]="client.clientName" class="form-control"/>
-        </div>
-        <div class="row full-name-inputs">
-          <div class="col-sm-6 input-group">
-            <input type="text" placeholder="Nick" class="form-control"/>
-          </div>
-          <div class="col-sm-6 input-group">
-            <input type="text" placeholder="Last Name" class="form-control"/>
-          </div>
-        </div>
-        <div class="input-group">
-          <input type="password" placeholder="Password" class="form-control"/>
-        </div>
-        <div class="input-group has-person-icon">
-          <input type="text" placeholder="With Icon" class="form-control"/>
-        </div>
-        <div class="input-group input-group-rounded">
-          <input type="text" placeholder="Rounded border" class="form-control"/>
-        </div>
+<nb-card>
+  <nb-card-header>Profile
+
+
+      <button type="button" class="btn btn-success pull-right" (click)="updateClient()">Save</button>
+
+
+  </nb-card-header>
+  <nb-card-body>
+    <div class="row">
+      <div class="col-sm-6">
         <div class="form-group">
-          <input type="text" placeholder="Project" class="form-control"/>
-          <small class="form-text">A block of help text that breaks into a new line and may extend beyond one line.
-          </small>
+          <label for="inputFirstName">Client Name</label>
+          <input type="text" class="form-control" id="inputFirstName" [(ngModel)]="client.clientName"  placeholder="First Name">
         </div>
-        <div class="input-group">
-          <input type="text" placeholder="Disabled input" class="form-control" disabled/>
-        </div>
-        <div class="input-group">
-          <textarea rows="5" placeholder="Text Area" class="form-control"></textarea>
-        </div>
-        <div class="input-group input-group-sm">
-          <input type="text" placeholder="Small Input" class="form-control"/>
-        </div>
-        <div class="input-group input-group-lg">
-          <input type="text" placeholder="Large Input" class="form-control"/>
-        </div>
-      </nb-card-body>
-    </nb-card>
+      </div>
 
-    <nb-card>
-      <nb-card-header>Input Groups</nb-card-header>
-      <nb-card-body>
-        <div class="input-group">
-          <span class="input-group-addon success">@</span>
-          <input type="text" class="form-control" placeholder="Username"/>
-        </div>
-
-        <div class="input-group mail-btn-group">
-          <span class="input-group-prepend">
-            <button class="btn btn-primary btn-icon input-group-text">
-              <i class="ion-ios-email-outline"></i>
-            </button>
-          </span>
-          <input type="text" class="form-control" placeholder="Recipient's username">
-          <span class="input-group-append">
-            <button class="btn btn-primary input-group-text">
-              @example.com
-            </button>
-          </span>
-        </div>
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search for...">
-          <span class="input-group-append">
-            <button class="btn btn-danger input-group-text">
-              Search
-            </button>
-          </span>
-        </div>
-        <div class="input-group">
-          <div class="dropdown input-group-prepend input-group-btn" ngbDropdown>
-            <button type="button" class="btn btn-success dropdown-toggle" ngbDropdownToggle>
-              Action
-            </button>
-            <ul class="dropdown-menu" ngbDropdownMenu>
-              <li class="dropdown-item">Action</li>
-              <li class="dropdown-item">Another action</li>
-              <li class="dropdown-item">Something else here</li>
-              <div role="separator" class="dropdown-divider"></div>
-              <li class="dropdown-item">Separated link</li>
-            </ul>
-          </div>
-          <input type="text" class="form-control">
-        </div>
-      </nb-card-body>
-    </nb-card>
-
-    <nb-card>
-      <nb-card-header>Selects</nb-card-header>
-      <nb-card-body>
+      <div class="col-sm-6">
         <div class="form-group">
-          <label>Simple Select</label>
-          <select class="form-control">
-            <option>Minsk</option>
-            <option>Gomel</option>
-            <option>Brest</option>
-            <option>Grodno</option>
-            <option>Mogilev</option>
-          </select>
+          <label for="inputLastName">Website Name</label>
+          <input type="text" class="form-control" [(ngModel)]="client.websiteName" id="inputLastName" placeholder="Last Name">
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
         <div class="form-group">
-          <label>Multiple Select</label>
-          <select multiple class="form-control">
-            <option>Item 1</option>
-            <option>Item 2</option>
-            <option>Item 3</option>
-            <option>Item 4</option>
-            <option>Item 5</option>
-          </select>
+          <label for="inputEmail">Email</label>
+          <input type="email" class="form-control" [(ngModel)]="client.emailId"  id="inputEmail" placeholder="Email">
         </div>
-      </nb-card-body>
-    </nb-card>
-  </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputWebsite">Phone No</label>
+          <input type="text" class="form-control" [(ngModel)]="client.phoneNo"  id="inputWebsite" placeholder="Website">
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputWebsite">Address</label>
+          <input type="text" class="form-control" [(ngModel)]="client.street"  id="inputWebsite" placeholder="Website">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputWebsite">City</label>
+          <input type="text" class="form-control" [(ngModel)]="client.city"  id="inputWebsite" placeholder="Website">
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputWebsite">Facebook Link</label>
+          <input type="text" class="form-control" [(ngModel)]="client.facebookLink"  id="inputWebsite" placeholder="Website">
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputWebsite">Twitter Link</label>
+          <input type="text" class="form-control" [(ngModel)]="client.twitterLink"  id="inputWebsite" placeholder="Website">
+        </div>
+      </div>
 
 
-</div>
+
+
+    </div>
+
+  </nb-card-body>
+</nb-card>
+
+
+

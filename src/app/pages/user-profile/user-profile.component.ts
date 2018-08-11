@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ClientService} from '../../@core/data/client.service';
+import {ClientMaster} from "../../@core/models/ClientMaster.model";
 
 @Component({
   selector: 'ngx-user-profile',
@@ -8,6 +9,7 @@ import {ClientService} from '../../@core/data/client.service';
 })
 export class UserProfileComponent implements OnInit {
   client: any;
+  clientDetails: ClientMaster = new ClientMaster();
   constructor(private clientService: ClientService) {
   }
   starRate = 2;
@@ -20,4 +22,12 @@ export class UserProfileComponent implements OnInit {
       console.log('clients..' + this.client.clientName);
     });
   }
+
+  updateClient(): void {
+    this.clientService.updateClient(this.client)
+      .subscribe( data => {
+        alert('User created successfully.');
+      });
+
+  };
 }

@@ -18,7 +18,12 @@ const httpOptions = {
       return this.http.get<ClientMaster>(this.userUrl + '/client/6');
     }
 
-    // public deleteUser(user) {
+    public updateClient(client) {
+      return this.http.put<ClientMaster>(this.userUrl + '/client/6', client);
+    }
+
+
+// public deleteUser(user) {
     //   return this.http.delete(this.userUrl + '/'+ user.id);
     // }
     //
